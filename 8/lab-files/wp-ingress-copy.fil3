@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress 
+metadata: 
+  name: wp-ingress
+spec:
+  rules:
+  - host: wordpress-1001440961.us-east-1.elb.amazonaws.com
+    http:
+      paths:
+      - backend: 
+          serviceName: wordpress 
+          servicePort: 80
+
